@@ -1,15 +1,12 @@
+import { useContext } from 'react';
 import Button from '../../Button/Button';
+import { LogicContext } from '../Counter';
 
-type ButtonPlusProps = {
-  setCount: React.Dispatch<React.SetStateAction<number>>;
-}
 
-function ButtonPlus({ setCount }: ButtonPlusProps) {
+function ButtonPlus() {
+  const setCount = useContext(LogicContext)!;
+
   const handlePlus = () => {
-    setCount(prevCount => prevCount + 1);
-    setCount(prevCount => prevCount + 1);
-    setCount(prevCount => prevCount + 1);
-    setCount(prevCount => prevCount + 1);
     setCount(prevCount => prevCount + 1);
   };
 

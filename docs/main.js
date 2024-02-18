@@ -12,114 +12,182 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ App; }
 /* harmony export */ });
-/* harmony import */ var _components_Modals_NoPortalExample_NoPortalExample__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/Modals/NoPortalExample/NoPortalExample */ "./src/components/Modals/NoPortalExample/NoPortalExample.tsx");
-/* harmony import */ var _components_Modals_PortalExample_PortalExample__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Modals/PortalExample/PortalExample */ "./src/components/Modals/PortalExample/PortalExample.tsx");
-/* provided dependency */ var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_Counter_Counter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Counter/Counter */ "./src/components/Counter/Counter.tsx");
+// import NoPortalExample from './components/Modals/NoPortalExample/NoPortalExample';
+// import PortalExample from './components/Modals/PortalExample/PortalExample';
+// import styles from './App.module.css';
+
 
 
 function App() {
-  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
-    className: "clipping-container"
-  }, /*#__PURE__*/React.createElement(_components_Modals_NoPortalExample_NoPortalExample__WEBPACK_IMPORTED_MODULE_0__["default"], null)), /*#__PURE__*/React.createElement("div", {
-    className: "clipping-container"
-  }, /*#__PURE__*/React.createElement(_components_Modals_PortalExample_PortalExample__WEBPACK_IMPORTED_MODULE_1__["default"], null)));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Counter_Counter__WEBPACK_IMPORTED_MODULE_1__["default"], null));
 }
 
 /***/ }),
 
-/***/ "./src/components/Modals/ModalContent/ModalContent.tsx":
-/*!*************************************************************!*\
-  !*** ./src/components/Modals/ModalContent/ModalContent.tsx ***!
-  \*************************************************************/
+/***/ "./src/components/Button/Button.tsx":
+/*!******************************************!*\
+  !*** ./src/components/Button/Button.tsx ***!
+  \******************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ ModalContent; }
-/* harmony export */ });
 /* provided dependency */ var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-function ModalContent(_ref) {
-  var onClose = _ref.onClose;
-  return /*#__PURE__*/React.createElement("div", {
-    className: "modal"
-  }, /*#__PURE__*/React.createElement("div", null, "I'm a modal dialog"), /*#__PURE__*/React.createElement("button", {
-    onClick: onClose
-  }, "Close"));
-}
+var Button = function Button(_ref) {
+  var children = _ref.children,
+    onClick = _ref.onClick,
+    className = _ref.className;
+  return /*#__PURE__*/React.createElement("button", {
+    className: className,
+    onClick: onClick
+  }, children);
+};
+/* harmony default export */ __webpack_exports__["default"] = (Button);
 
 /***/ }),
 
-/***/ "./src/components/Modals/NoPortalExample/NoPortalExample.tsx":
-/*!*******************************************************************!*\
-  !*** ./src/components/Modals/NoPortalExample/NoPortalExample.tsx ***!
-  \*******************************************************************/
+/***/ "./src/components/Counter/ButtonMinus/ButtonMinus.tsx":
+/*!************************************************************!*\
+  !*** ./src/components/Counter/ButtonMinus/ButtonMinus.tsx ***!
+  \************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ NoPortalExample; }
-/* harmony export */ });
+/* harmony import */ var _Button_Button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../Button/Button */ "./src/components/Button/Button.tsx");
+/* provided dependency */ var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var ButtonMinus = function ButtonMinus(_ref) {
+  var setCount = _ref.setCount,
+    count = _ref.count;
+  var handleMinus = function handleMinus() {
+    setCount(count - 1);
+    setCount(count - 1);
+    setCount(count - 1);
+    setCount(count - 1);
+    setCount(count - 1);
+  };
+  return /*#__PURE__*/React.createElement(_Button_Button__WEBPACK_IMPORTED_MODULE_0__["default"], {
+    onClick: handleMinus
+  }, "-");
+};
+/* harmony default export */ __webpack_exports__["default"] = (ButtonMinus);
+
+/***/ }),
+
+/***/ "./src/components/Counter/ButtonPlus/ButtonPlus.tsx":
+/*!**********************************************************!*\
+  !*** ./src/components/Counter/ButtonPlus/ButtonPlus.tsx ***!
+  \**********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Button_Button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../Button/Button */ "./src/components/Button/Button.tsx");
+/* provided dependency */ var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+function ButtonPlus(_ref) {
+  var setCount = _ref.setCount;
+  var handlePlus = function handlePlus() {
+    setCount(function (prevCount) {
+      return prevCount + 1;
+    });
+    setCount(function (prevCount) {
+      return prevCount + 1;
+    });
+    setCount(function (prevCount) {
+      return prevCount + 1;
+    });
+    setCount(function (prevCount) {
+      return prevCount + 1;
+    });
+    setCount(function (prevCount) {
+      return prevCount + 1;
+    });
+  };
+  return /*#__PURE__*/React.createElement(_Button_Button__WEBPACK_IMPORTED_MODULE_0__["default"], {
+    onClick: handlePlus
+  }, "+");
+}
+/* harmony default export */ __webpack_exports__["default"] = (ButtonPlus);
+
+/***/ }),
+
+/***/ "./src/components/Counter/Counter.tsx":
+/*!********************************************!*\
+  !*** ./src/components/Counter/Counter.tsx ***!
+  \********************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "./node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _ModalContent_ModalContent__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../ModalContent/ModalContent */ "./src/components/Modals/ModalContent/ModalContent.tsx");
+/* harmony import */ var _ButtonPlus_ButtonPlus__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ButtonPlus/ButtonPlus */ "./src/components/Counter/ButtonPlus/ButtonPlus.tsx");
+/* harmony import */ var _ButtonMinus_ButtonMinus__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ButtonMinus/ButtonMinus */ "./src/components/Counter/ButtonMinus/ButtonMinus.tsx");
+/* harmony import */ var _Display_Display__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Display/Display */ "./src/components/Counter/Display/Display.tsx");
 /* provided dependency */ var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
 
 
-function NoPortalExample() {
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),
+
+
+var Counter = function Counter() {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(0),
     _useState2 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_useState, 2),
-    showModal = _useState2[0],
-    setShowModal = _useState2[1];
-  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("button", {
-    onClick: function onClick() {
-      return setShowModal(true);
-    }
-  }, "Show modal without a portal"), showModal && /*#__PURE__*/React.createElement(_ModalContent_ModalContent__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    onClose: function onClose() {
-      return setShowModal(false);
-    }
+    count = _useState2[0],
+    setCount = _useState2[1];
+  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
+    console.log('From useEffect');
+  }, [count]);
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(_ButtonPlus_ButtonPlus__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    setCount: setCount,
+    count: count
+  }), /*#__PURE__*/React.createElement(_Display_Display__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    info: count
+  }), /*#__PURE__*/React.createElement(_ButtonMinus_ButtonMinus__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    setCount: setCount,
+    count: count
   }));
-}
+};
+/* harmony default export */ __webpack_exports__["default"] = (Counter);
 
 /***/ }),
 
-/***/ "./src/components/Modals/PortalExample/PortalExample.tsx":
-/*!***************************************************************!*\
-  !*** ./src/components/Modals/PortalExample/PortalExample.tsx ***!
-  \***************************************************************/
+/***/ "./src/components/Counter/Display/Display.tsx":
+/*!****************************************************!*\
+  !*** ./src/components/Counter/Display/Display.tsx ***!
+  \****************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ PortalExample; }
-/* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "./node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var _ModalContent_ModalContent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../ModalContent/ModalContent */ "./src/components/Modals/ModalContent/ModalContent.tsx");
+/* harmony import */ var _Div_Div__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../Div/Div */ "./src/components/Div/Div.tsx");
 /* provided dependency */ var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
+var Display = function Display(_ref) {
+  var info = _ref.info;
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(_Div_Div__WEBPACK_IMPORTED_MODULE_0__["default"], null, info));
+};
+/* harmony default export */ __webpack_exports__["default"] = (Display);
 
+/***/ }),
 
+/***/ "./src/components/Div/Div.tsx":
+/*!************************************!*\
+  !*** ./src/components/Div/Div.tsx ***!
+  \************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-function PortalExample() {
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false),
-    _useState2 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_useState, 2),
-    showModal = _useState2[0],
-    setShowModal = _useState2[1];
-  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("button", {
-    onClick: function onClick() {
-      return setShowModal(true);
-    }
-  }, "Show modal using a portal"), showModal && /*#__PURE__*/(0,react_dom__WEBPACK_IMPORTED_MODULE_2__.createPortal)( /*#__PURE__*/React.createElement(_ModalContent_ModalContent__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    onClose: function onClose() {
-      return setShowModal(false);
-    }
-  }), document.body));
-}
+__webpack_require__.r(__webpack_exports__);
+/* provided dependency */ var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var Div = function Div(_ref) {
+  var className = _ref.className,
+    children = _ref.children;
+  return /*#__PURE__*/React.createElement("div", {
+    className: className
+  }, children);
+};
+/* harmony default export */ __webpack_exports__["default"] = (Div);
 
 /***/ }),
 

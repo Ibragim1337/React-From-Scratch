@@ -1,17 +1,17 @@
+import { useContext } from 'react';
 import Button from '../../Button/Button';
+import { CountContext, LogicContext } from '../Counter';
 
-type ButtonMinusProps = {
-  setCount: Function,
-  count: number
-}
 
-const ButtonMinus = ({ setCount, count }: ButtonMinusProps) => {
+
+const ButtonMinus = () => {
+    const count = useContext(CountContext);
+    const setCount = useContext(LogicContext)!;
+
+
+
     const handleMinus = () => {
 		    setCount(count - 1);
-        setCount(count - 1);
-        setCount(count - 1);
-        setCount(count - 1);
-        setCount(count - 1);
 	}
 
     return (

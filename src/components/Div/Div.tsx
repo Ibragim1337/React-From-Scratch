@@ -1,8 +1,8 @@
 import Children from '../../types/Children'
 
 type DivProps = {
-  className: string,
-  children: Children
+  className?: string;
+  children: Children;
 }
 
 const Div = ({ className, children }: DivProps) => {
