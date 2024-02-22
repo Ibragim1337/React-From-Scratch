@@ -4441,7 +4441,9 @@ function Favorite(_ref) {
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/dist/index.js");
 /* provided dependency */ var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
 var Root = function Root() {
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
     id: "sidebar"
@@ -4471,7 +4473,7 @@ var Root = function Root() {
     href: "/contacts/2"
   }, "Your Friend"))))), /*#__PURE__*/React.createElement("div", {
     id: "detail"
-  }));
+  }, /*#__PURE__*/React.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_0__.Outlet, null)));
 };
 /* harmony default export */ __webpack_exports__["default"] = (Root);
 
@@ -41624,10 +41626,11 @@ __webpack_require__.r(__webpack_exports__);
 var router = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_6__.createBrowserRouter)([{
   path: "/",
   element: /*#__PURE__*/React.createElement(_routes_root__WEBPACK_IMPORTED_MODULE_3__["default"], null),
-  errorElement: /*#__PURE__*/React.createElement(_error_page__WEBPACK_IMPORTED_MODULE_4__["default"], null)
-}, {
-  path: "contacts/:contactId",
-  element: /*#__PURE__*/React.createElement(_routes_contact__WEBPACK_IMPORTED_MODULE_5__["default"], null)
+  errorElement: /*#__PURE__*/React.createElement(_error_page__WEBPACK_IMPORTED_MODULE_4__["default"], null),
+  children: [{
+    path: "contacts/:contactId",
+    element: /*#__PURE__*/React.createElement(_routes_contact__WEBPACK_IMPORTED_MODULE_5__["default"], null)
+  }]
 }]);
 var rootContainer = document.querySelector('#root');
 if (rootContainer === null) throw new Error('Can\'t find root container');
