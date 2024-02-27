@@ -40,11 +40,11 @@ var CounterRedux = function CounterRedux() {
   var dispatch = (0,_store__WEBPACK_IMPORTED_MODULE_1__.useTypedDispatch)();
   return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("button", {
     onClick: function onClick() {
-      return dispatch((0,_redux_slices_CounterSlices__WEBPACK_IMPORTED_MODULE_0__.decrement)());
+      return dispatch((0,_redux_slices_CounterSlices__WEBPACK_IMPORTED_MODULE_0__.decrement)(5));
     }
   }, "-"), count, /*#__PURE__*/React.createElement("button", {
     onClick: function onClick() {
-      return dispatch((0,_redux_slices_CounterSlices__WEBPACK_IMPORTED_MODULE_0__.increment)());
+      return dispatch((0,_redux_slices_CounterSlices__WEBPACK_IMPORTED_MODULE_0__.increment)(5));
     }
   }, "+"));
 };
@@ -70,11 +70,11 @@ var counterSlice = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.createSlice)
   name: 'counter',
   initialState: 0,
   reducers: {
-    increment: function increment(state) {
-      return state + 1;
+    increment: function increment(state, action) {
+      return state + action.payload;
     },
-    decrement: function decrement(state) {
-      return state - 1;
+    decrement: function decrement(state, action) {
+      return state - action.payload;
     }
   }
 });

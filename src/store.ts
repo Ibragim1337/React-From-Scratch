@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import counterReducer from './components/redux/slices/CounterSlices';
+import  counterStepSlice  from "./components/redux/slices/StepSlices";
 import { useDispatch, useSelector } from "react-redux";
 
 const store = configureStore({
 	reducer: {
-		counterReducer
+		counterReducer,
+		counterStepSlice
 	}
 });
 
