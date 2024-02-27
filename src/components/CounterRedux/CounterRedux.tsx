@@ -15,7 +15,9 @@ const CounterRedux = () => {
 				{count}
 				<button onClick={() => dispatch(increment(step))}>+</button>
 			</div>
-
+			
+			<br/>
+			
 			<div>
 				<button onClick={() => dispatch(decrementStep())}>-</button>
 				{step}
