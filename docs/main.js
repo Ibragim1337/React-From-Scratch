@@ -49,6 +49,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modal_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modal.css */ "./src/components/Modal/modal.css");
 
 
+ // Создайте файл modal.css для стилей модального окна
 
 var Modal = function Modal(_ref) {
   var onClose = _ref.onClose;
@@ -89,7 +90,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".modal-overlay {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background-color: rgba(0, 0, 0, 0.5);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.modal {\n  background-color: white;\n  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);\n  padding: 20px;\n  border-radius: 5px;\n}\n\n.close-btn {\n  position: absolute;\n  top: 10px;\n  right: 10px;\n  background: none;\n  border: none;\n  font-size: 20px;\n  cursor: pointer;\n}\n\n.modal-content {\n  text-align: center;\n}", "",{"version":3,"sources":["webpack://./src/components/Modal/modal.css"],"names":[],"mappings":"AAAA;EACE,eAAA;EACA,MAAA;EACA,OAAA;EACA,WAAA;EACA,YAAA;EACA,oCAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;AACF;;AAEA;EACE,uBAAA;EACA,2CAAA;EACA,aAAA;EACA,kBAAA;AACF;;AAEA;EACE,kBAAA;EACA,SAAA;EACA,WAAA;EACA,gBAAA;EACA,YAAA;EACA,eAAA;EACA,eAAA;AACF;;AAEA;EACE,kBAAA;AACF","sourcesContent":[".modal-overlay {\r\n  position: fixed;\r\n  top: 0;\r\n  left: 0;\r\n  width: 100%;\r\n  height: 100%;\r\n  background-color: rgba(0, 0, 0, 0.5);\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n}\r\n\r\n.modal {\r\n  background-color: white;\r\n  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);\r\n  padding: 20px;\r\n  border-radius: 5px;\r\n}\r\n\r\n.close-btn {\r\n  position: absolute;\r\n  top: 10px;\r\n  right: 10px;\r\n  background: none;\r\n  border: none;\r\n  font-size: 20px;\r\n  cursor: pointer;\r\n}\r\n\r\n.modal-content {\r\n  text-align: center;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "@charset \"UTF-8\";\n.close-btn {\n  position: absolute;\n  top: 10px;\n  right: 10px;\n  background: none;\n  border: none;\n  font-size: 20px;\n  cursor: pointer;\n  z-index: 2; /* чтобы кнопка была поверх остального содержимого модального окна */\n}", "",{"version":3,"sources":["webpack://./src/components/Modal/modal.css"],"names":[],"mappings":"AAAA,gBAAgB;AAAhB;EACE,kBAAA;EACA,SAAA;EACA,WAAA;EACA,gBAAA;EACA,YAAA;EACA,eAAA;EACA,eAAA;EACA,UAAA,EAAA,oEAAA;AAEF","sourcesContent":[".close-btn {\r\n  position: absolute;\r\n  top: 10px;\r\n  right: 10px;\r\n  background: none;\r\n  border: none;\r\n  font-size: 20px;\r\n  cursor: pointer;\r\n  z-index: 2; /* чтобы кнопка была поверх остального содержимого модального окна */\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
